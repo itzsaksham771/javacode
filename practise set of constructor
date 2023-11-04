@@ -1,0 +1,38 @@
+class cylinder {
+    private int radius;
+    private int height;
+    public int getradius() {
+        return radius;
+    }
+    public void setradius(int r) {
+        radius=r;
+    }
+    public int getheight() {
+        return height;
+    }
+    public void setheight(int h) {
+        height=h;
+    }
+    public double surfacearea() {
+        return 2*Math.PI*radius*radius + 2*Math.PI*radius*height;
+    }
+    public double volume() {
+        return Math.PI*radius*radius*height;
+    }
+    public cylinder(int radius, int height) {
+        this.radius = radius;
+        this.height=height;
+    }
+
+}
+public class saksham_44 {
+    public static void main(String[] args) {
+        cylinder myCylinder = new cylinder(9,12);
+        myCylinder.setradius(3);
+        System.out.println(myCylinder.getradius());
+        myCylinder.setheight(8);
+        System.out.println(myCylinder.getheight());
+        System.out.println(myCylinder.surfacearea());
+        System.out.println(myCylinder.volume());
+    }
+}
