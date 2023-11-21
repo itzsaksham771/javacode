@@ -1,0 +1,35 @@
+class Base1 {
+    public int x;
+    Base1() {
+        System.out.println("I am a constructor");
+        System.out.println("My name is Saksham Maheshwari");
+    }
+    Base1(int x) {
+        System.out.println("I am an ovrloaded constructor with x : "+x);
+    }
+}
+class Derived extends Base1 {
+    Derived() {
+        super(0);
+        System.out.println("I am a derived class constructor");
+        }
+    Derived(int x, int y) {
+        super(x);
+        System.out.println("I am an overloaded constructor with y"+y);
+    }
+}
+class ChildDerived extends Derived{
+    ChildDerived() {
+        System.out.println("I am a choti constructor");
+    }
+    ChildDerived(int x, int y, int z) {
+        super(x,y);
+        System.out.println("I am an overloaded constructor with z"+z);
+    }
+}
+public class saksham_46_inhconstructor {
+    public static void main(String[] args) {
+        ChildDerived ch = new ChildDerived();
+       //Derived d = new Derived();
+    }
+}
