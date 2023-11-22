@@ -1,0 +1,23 @@
+class phone {
+    public void time() {
+        System.out.println("8 A.M.");
+    }
+    public void on() {
+        System.out.println("Turning on phone ");
+    }
+}
+class smartphone extends phone {
+    public void music() {
+        System.out.println("MUSIC.......");
+    }
+    public void on() {
+        System.out.println("Turning on SMART PHONE ......");
+    }
+}
+public class saksham_49 {
+    public static void main(String[] args) {
+        phone obj = new smartphone();
+        obj.time();
+        obj.on();
+    }
+}
