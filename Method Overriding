@@ -1,0 +1,25 @@
+// Method overriding 
+class A {
+    public int harrry () {
+        return 4;
+    }
+    public void meth2() {
+        System.out.println("I am method 2 of class A");
+    }
+}
+class B {
+    public void meth2() {
+        System.out.println("I am method 2 of class B");
+    }
+    public void meth3() {
+        System.out.println("I am another method you know....");
+    }
+}
+public class saksham_48 {
+    public static void main(String[] args) {
+        A a = new A();
+        a.meth2();
+        B b = new B();
+        b.meth2();
+    }
+}
