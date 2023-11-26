@@ -1,0 +1,29 @@
+abstract class parent {
+   public parent() {
+        System.out.println("Mai parent ka constructor hu");
+    }
+    public void hello() {
+        System.out.println("Hello boys and girls ");
+    }
+    abstract public void greet();
+    abstract public void greet2();
+}
+class child extends parent {
+    public void greet() {
+        System.out.println("Good Morning : ");
+    }
+    public void greet2() {
+        System.out.println("Good Afternoon");
+    }
+}
+abstract class child2 extends parent {
+    public void ex() {
+        System.out.println("To kese hai aap log....!");
+    }
+}
+public class saksham_53_abstarct {
+    public static void main(String[] args) {
+            child ch  = new child();
+
+    } 
+}
