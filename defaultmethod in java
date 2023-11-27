@@ -1,0 +1,45 @@
+interface mycamera {
+    void takesnap();
+    void recordvideo();
+   private void greet() {
+        System.out.println("Good Morning");
+    }
+    default void record4kvideo() {
+        greet();
+        System.out.println("4k video recording");
+    }
+}
+interface mywifi {
+    String[] mynetwork();
+    void connecttonetwork(String network);
+}
+class myphone {
+    void callmynumber(int phonenumber) {
+        System.out.println("Calling"+phonenumber);
+    }
+    void pickcall() {
+        System.out.println("Picking...");
+    }
+}
+class mysmartphone extends myphone implements mycamera, mywifi {
+    public void takesnap() {
+        System.out.println("taking snap...");
+    }
+    public void recordvideo() {
+        System.out.println("video recording....");
+    }
+    public String[] getnetworks() {
+        System.out.println("Getting list of networks... ");
+        String Networklist = {"harry", "Saksham", "JAI SHREE RAM"}; 
+        return Networklist;
+    }
+    public void connecttonetwork(String network) {
+        System.out.println("Connecting"+network);
+    }
+}
+public class saksham_57_defaultmethod {
+    public static void main(String[] args) {
+        mysmartphone apple = new mysmartphone();
+        apple.record4kvideo();
+    }
+}
