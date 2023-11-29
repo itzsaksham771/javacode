@@ -1,0 +1,55 @@
+/*abstract class pen {
+    abstract public void write();
+    abstract public void refill();
+}
+class sample extends pen {
+   public  void write() {
+        System.out.println("Writing");
+    }
+    public void refill() {
+        System.out.println("Refilling");
+    }
+    public void changenib() {
+        System.out.println("Changing the nib....");
+    }
+}
+public class saksham_60_practiseset {
+    public static void main(String[] args) {
+        sample obj = new sample();
+        obj.write();
+        obj.refill();
+        obj.changenib();
+    }
+}*/
+interface basicanimal {
+    void eat();
+    void sleep();
+}
+class monkey {
+    public void jump() {
+        System.out.println("Jumping...");
+    }
+    public void bite() {
+        System.out.println("Btiing....");
+    }
+}
+class human extends monkey implements basicanimal {
+    public void eat() {
+        System.out.println("Eating...");
+    }
+    public void sleep() {
+        System.out.println("Sleeping...");
+    }
+}
+public class saksham_60_practiseset {
+    public static void main(String[] args) {
+        human obj = new human();
+       // obj.sleep();
+        //obj.jump();
+        // now implementing polymorphism
+        monkey m1 = new human();
+        m1.jump();
+        m1.bite();
+
+    }
+}
