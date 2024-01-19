@@ -1,0 +1,24 @@
+import java.util.*;
+public class saksham_91_arrayList {
+    public static void main(String[] args) {
+        ArrayList<Integer> l1 = new ArrayList<>();
+        l1.add(6);
+        l1.add(72);
+        l1.add(51);
+        l1.add(8);
+        l1.add(6);
+        //l1.add(0,74); //add 74 on index 0
+        //l1.remove(0); // o number bali index khatam
+        System.out.println(l1.contains(51));
+        System.out.println(l1.contains(26));
+        ArrayList<Integer> l2 = new ArrayList<>();
+        l2.add(855);
+        l2.add(855);
+        l2.add(851);
+        l2.add(963);
+        l1.addAll(0,l2);
+        System.out.println(l1);
+        System.out.println(l1.indexOf(855));
+        System.out.println(l1.lastIndexOf(855));
+    }
+}
